@@ -28,13 +28,11 @@ namespace interfaceGravity.Models
         public int Width { get => (int)_taille.X; set => _taille.X = (int)value; }
         public int Height { get => (int)_taille.Y; set => _taille.Y = (int)value; }
 
-        public Sprite(float masse, Vector2 position, Vector2 taille, int width, int height)
+        public Sprite(float masse, Vector2 position, Vector2 taille)
         {
             _masse = masse;
             _position = position;
             _taille = taille;
-            Width = width;
-            Height = height;
         }
 
 
@@ -55,10 +53,10 @@ namespace interfaceGravity.Models
         /// <summary>
         /// charge une texture blanche par défaut pour le sprite
         /// </summary>
-        public void LoadContent(GraphicsDevice graphicsDevice)
+        public void LoadContent(GraphicsDevice graphicsDevice, Color color)
         {
             Texture2D texture = new Texture2D(graphicsDevice, 1, 1);
-            texture.SetData(new[] { Color.White });
+            texture.SetData(new[] { color });
             _texture = texture;
         }
 

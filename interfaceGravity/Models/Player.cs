@@ -21,7 +21,7 @@ namespace interfaceGravity.Models
 
         private KeyboardState _previousKState = Keyboard.GetState();
 
-        public Player(float masse, Vector2 position, Vector2 taille, int width, int height) : base(masse, position, taille, width, height)
+        public Player(float masse, Vector2 position, Vector2 taille) : base(masse, position, taille)
         {
 
         }
@@ -59,21 +59,53 @@ namespace interfaceGravity.Models
             }
 
             // gestion gravité
-            ApplyForce(new Vector2(0, 981f * Masse)); // 9.81f
-
-
+            if (!_grounded)
+            {
+                ApplyForce(new Vector2(0, 981f * Masse)); // 9.81f , 981f
+            }
 
             // Appel à la physique de Sprite 
             base.Update(gameTime);
 
+
             // gestion des collisions avec les éléments du jeu
+
+            HandleCollisions();
+
             /*if (Position.Y >= 200)
             {
                 _position.Y = 200;
                 _vitesse.Y = 0;
                 _grounded = true;
             }*/
+            /*_grounded = false;
+            Rectangle playerRect = GetRectangle;
+            foreach (Sprite platform in Globals.Plateforms)
+            {
+                if (playerRect.Intersects(platform.GetRectangle))
+                {
+                    if (Position.X + Width >= platform.GetRectangle.Left)
+                    {
+                        _vitesse.X = 0;
+                    }
+                    else if (Position.X >= platform.GetRectangle.Right + Width)
+                    {
+                        _vitesse.X = 0;
+                        //_position.X = platform.Position.X + Width;
+                    }
 
+                    if (playerRect.Bottom >= platform.GetRectangle.Top)
+                    {
+                        _position.Y = platform.GetRectangle.Top - Height;
+                        _vitesse.Y = 0;
+                        _grounded = true;
+                    }
+                    else if (Position.Y >= platform.GetRectangle.Bottom - Height)
+                    {
+                        _vitesse.Y = 0;
+                    }
+                }
+            }*/
 
 
 
@@ -86,7 +118,8 @@ namespace interfaceGravity.Models
                 if (direction.X == 0)
                 {
                     _vitesse.X *= _friction;
-                } else if (inputDirection != velocityDirection && direction.X != 0)
+                }
+                else if (inputDirection != velocityDirection && direction.X != 0)
                 {
                     // quand le joueur change de direction, la friction devient plus forte
                     _vitesse.X *= _friction - 0.1f;
@@ -140,6 +173,17 @@ namespace interfaceGravity.Models
                     }
                 }
             }
+
+            //foreach (Sprite plateform in Globals.Plateforms)
+            //{
+
+            //}
+
+            if (_position.Y >= 500)
+            {
+                _position = new Vector2(100, 100);
+            }
         }
+
     }
 }
