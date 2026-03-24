@@ -8,6 +8,6 @@ namespace interfaceGravity.Models
 {
     static class Globals
     {
-        public static List<Sprite> Collision = new List<Sprite>();
+        public static List<Sprite> Plateforms = new List<Sprite>();
     }
 }

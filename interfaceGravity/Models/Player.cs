@@ -67,12 +67,14 @@ namespace interfaceGravity.Models
             base.Update(gameTime);
 
             // gestion des collisions avec les éléments du jeu
-            if (Position.Y >= 200)
+            /*if (Position.Y >= 200)
             {
                 _position.Y = 200;
                 _vitesse.Y = 0;
                 _grounded = true;
-            }
+            }*/
+
+
 
 
             // gestion de la friction
@@ -98,6 +100,46 @@ namespace interfaceGravity.Models
             }
 
             _previousKState = kstate;
+        }
+
+        public void HandleCollisions()
+        {
+            _grounded = false;
+            Rectangle playerRect = GetRectangle;
+
+            foreach (Sprite plateform in Globals.Plateforms)
+            {
+                Rectangle platformRect = plateform.GetRectangle;
+
+                if (playerRect.Intersects(platformRect))
+                {
+                    // collision par le bas
+                    if (_vitesse.Y > 0 && playerRect.Bottom - _vitesse.Y <= platformRect.Top)
+                    {
+                        _position.Y = platformRect.Top - Height;
+                        _vitesse.Y = 0;
+                        _grounded = true;
+                    }
+                    // collision par le haut
+                    else if (_vitesse.Y < 0 && playerRect.Top - _vitesse.Y >= platformRect.Bottom)
+                    {
+                        _position.Y = platformRect.Bottom;
+                        _vitesse.Y = 0;
+                    }
+                    // collision par la gauche
+                    else if (_vitesse.X > 0 && playerRect.Right - _vitesse.X <= platformRect.Left)
+                    {
+                        _position.X = platformRect.Left - Width;
+                        _vitesse.X = 0;
+                    }
+                    // collision par la droite
+                    else if (_vitesse.X < 0 && playerRect.Left - _vitesse.X >= platformRect.Right)
+                    {
+                        _position.X = platformRect.Right;
+                        _vitesse.X = 0;
+                    }
+                }
+            }
         }
     }
 }
