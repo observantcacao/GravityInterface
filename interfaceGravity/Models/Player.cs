@@ -13,7 +13,7 @@ namespace interfaceGravity.Models
         private float _speed = 800f;
         private float _jumpForce = 400f;
         private bool _grounded = true;
-        private float _friction = 0.88f;
+        private float _friction = 0.8f;
 
         private Keys _leftKey = Keys.A;
         private Keys _rightKey = Keys.D;
@@ -72,12 +72,23 @@ namespace interfaceGravity.Models
                 _position.Y = 200;
                 _vitesse.Y = 0;
                 _grounded = true;
-            }   
+            }
+
 
             // gestion de la friction
-            if (_grounded && direction.X == 0)
+            int inputDirection = Math.Sign(direction.X);
+            int velocityDirection = Math.Sign(_vitesse.X);
+
+            if (_grounded)
             {
-                _vitesse.X *= _friction;
+                if (direction.X == 0)
+                {
+                    _vitesse.X *= _friction;
+                } else if (inputDirection != velocityDirection && direction.X != 0)
+                {
+                    // quand le joueur change de direction, la friction devient plus forte
+                    _vitesse.X *= _friction - 0.1f;
+                }
 
                 // si trop petit, on stoppe le mouvement horizontal
                 if (Math.Abs(_vitesse.X) < 0.1f)
@@ -85,7 +96,7 @@ namespace interfaceGravity.Models
                     _vitesse.X = 0;
                 }
             }
-            
+
             _previousKState = kstate;
         }
     }

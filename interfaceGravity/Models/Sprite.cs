@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace interfaceGravity.Models
 {
+
     public class Sprite : IGravity, IGraphicElement
     {
         protected float _masse;
