@@ -58,8 +58,7 @@
               "RelativeToolTip": "Models\\Sprite.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAAwBAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T14:11:27.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T14:11:27.973Z"
             },
             {
               "$type": "Document",
@@ -67,9 +66,9 @@
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Player.cs",
               "RelativeDocumentMoniker": "Models\\Player.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Player.cs*",
-              "RelativeToolTip": "Models\\Player.cs*",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAwwJUAAAA+AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Player.cs",
+              "RelativeToolTip": "Models\\Player.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwEUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-24T12:22:35.466Z",
               "EditorCaption": ""
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Interfaces\\IGraphicElement.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:15:17.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-24T09:15:17.453Z"
             },
             {
               "$type": "Document",
@@ -121,8 +119,7 @@
               "RelativeToolTip": "Game1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T07:47:44.943Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T07:47:44.943Z"
             },
             {
               "$type": "Document",

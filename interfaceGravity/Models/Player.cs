@@ -51,6 +51,7 @@ namespace interfaceGravity.Models
             // applique la force horizontale
             ApplyForce(new Vector2(direction.X * _speed, 0));
 
+
             // saut
             if (kstate.IsKeyDown(_jumpKey) && _grounded)
             {
@@ -64,50 +65,20 @@ namespace interfaceGravity.Models
                 ApplyForce(new Vector2(0, 981f * Masse)); // 9.81f , 981f
             }
 
+
             // Appel à la physique de Sprite 
             base.Update(gameTime);
 
-
             // gestion des collisions avec les éléments du jeu
 
-            HandleCollisions();
+            //HandleCollisions();
 
             /*if (Position.Y >= 200)
             {
                 _position.Y = 200;
                 _vitesse.Y = 0;
                 _grounded = true;
-            }*/
-            /*_grounded = false;
-            Rectangle playerRect = GetRectangle;
-            foreach (Sprite platform in Globals.Plateforms)
-            {
-                if (playerRect.Intersects(platform.GetRectangle))
-                {
-                    if (Position.X + Width >= platform.GetRectangle.Left)
-                    {
-                        _vitesse.X = 0;
-                    }
-                    else if (Position.X >= platform.GetRectangle.Right + Width)
-                    {
-                        _vitesse.X = 0;
-                        //_position.X = platform.Position.X + Width;
-                    }
-
-                    if (playerRect.Bottom >= platform.GetRectangle.Top)
-                    {
-                        _position.Y = platform.GetRectangle.Top - Height;
-                        _vitesse.Y = 0;
-                        _grounded = true;
-                    }
-                    else if (Position.Y >= platform.GetRectangle.Bottom - Height)
-                    {
-                        _vitesse.Y = 0;
-                    }
-                }
-            }*/
-
-
+            */
 
             // gestion de la friction
             int inputDirection = Math.Sign(direction.X);
