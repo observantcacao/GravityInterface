@@ -1,6 +1,7 @@
 ﻿using interfaceGravity.Interfaces;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,17 +15,17 @@ namespace interfaceGravity.Models
     public class Sprite : IGraphicElement
     {
         protected Vector2 _position;
-        protected Vector2 _taille;
+        protected Vector2 _size;
         protected Texture2D _texture;
         public Vector2 Position { get => _position; }
         public Texture2D Texture { get => _texture; set => _texture = value; }
-        public int Width { get => (int)_taille.X; set => _taille.X = (int)value; }
-        public int Height { get => (int)_taille.Y; set => _taille.Y = (int)value; }
+        public int Width { get => (int)_size.X; set => _size.X = (int)value; }
+        public int Height { get => (int)_size.Y; set => _size.Y = (int)value; }
 
-        public Sprite(Vector2 position, Vector2 taille)
+        public Sprite(Vector2 position, Vector2 size)
         {
             _position = position;
-            _taille = taille;
+            _size = size;
         }
 
         public void LoadContent(Texture2D texture)
@@ -33,8 +34,10 @@ namespace interfaceGravity.Models
         }
 
         /// <summary>
-        /// charge une texture blanche par défaut pour le sprite
+        /// charage une couleur unie dans la texture du sprite
         /// </summary>
+        /// <param name="graphicsDevice"></param>
+        /// <param name="color">couleur voulue dans le sprite</param>
         public void LoadContent(GraphicsDevice graphicsDevice, Color color)
         {
             Texture2D texture = new Texture2D(graphicsDevice, 1, 1);
@@ -44,7 +47,7 @@ namespace interfaceGravity.Models
 
         public virtual void Update(GameTime gameTime)
         {
-            // ajouter logique...
+            // code...
         }
 
         public void Draw(SpriteBatch spriteBatch)

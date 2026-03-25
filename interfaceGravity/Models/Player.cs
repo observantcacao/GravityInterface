@@ -123,10 +123,10 @@ namespace interfaceGravity.Models
             _acceleration += force / _masse;
         }
 
-        protected bool HandleCollisions()
+        /*protected bool HandleCollisions()
         {
             // implémenter la logique de collision avec les éléments du jeu
-        }
+        }*/
 
 
     }
