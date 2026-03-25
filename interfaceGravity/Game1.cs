@@ -23,8 +23,8 @@ namespace interfaceGravity
         protected override void Initialize()
         {
             _player = new Player(1f, new Vector2(100, 100), new Vector2(50, 50));
-            _platform1 = new Sprite(0f, new Vector2(0, 300), new Vector2(400, 600));
-            _platform2 = new Sprite(0f, new Vector2(0, 350), new Vector2(1000, 600));
+            _platform1 = new Sprite(new Vector2(0, 300), new Vector2(400, 600));
+            _platform2 = new Sprite(new Vector2(0, 350), new Vector2(1000, 600));
             base.Initialize();
         }
 

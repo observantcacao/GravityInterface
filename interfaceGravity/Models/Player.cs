@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using interfaceGravity.Interfaces;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
@@ -8,12 +9,15 @@ using System.Threading.Tasks;
 
 namespace interfaceGravity.Models
 {
-    public class Player : Sprite
+    public class Player : Sprite, IGravity
     {
         private float _speed = 800f;
         private float _jumpForce = 400f;
         private bool _grounded = true;
         private float _friction = 0.8f;
+        private float _masse = 1f;
+        private Vector2 _vitesse = Vector2.Zero;
+        private Vector2 _acceleration = Vector2.Zero;
 
         private Keys _leftKey = Keys.A;
         private Keys _rightKey = Keys.D;
@@ -21,7 +25,11 @@ namespace interfaceGravity.Models
 
         private KeyboardState _previousKState = Keyboard.GetState();
 
-        public Player(float masse, Vector2 position, Vector2 taille) : base(masse, position, taille)
+        public float Masse { get => _masse; }
+        public Vector2 Vitesse { get => _vitesse;}
+        public Vector2 Acceleration { get => _acceleration; }
+
+        public Player(float masse, Vector2 position, Vector2 taille) : base(position, taille)
         {
 
         }
@@ -48,8 +56,6 @@ namespace interfaceGravity.Models
                 direction.X = 1;
             }
 
-            // applique la force horizontale
-            ApplyForce(new Vector2(direction.X * _speed, 0));
 
 
             // saut
@@ -65,9 +71,11 @@ namespace interfaceGravity.Models
                 ApplyForce(new Vector2(0, 981f * Masse)); // 9.81f , 981f
             }
 
+            // applique la force horizontale
+            ApplyForce(new Vector2(direction.X * _speed, 0));
 
-            // Appel à la physique de Sprite 
-            base.Update(gameTime);
+            // gestion de la physique
+
 
             // gestion des collisions avec les éléments du jeu
 
@@ -106,55 +114,20 @@ namespace interfaceGravity.Models
             _previousKState = kstate;
         }
 
-        public void HandleCollisions()
+        public void ApplyForce(Vector2 force)
         {
-            _grounded = false;
-            Rectangle playerRect = GetRectangle;
-
-            foreach (Sprite plateform in Globals.Plateforms)
+            if (_masse <= 0f)
             {
-                Rectangle platformRect = plateform.GetRectangle;
-
-                if (playerRect.Intersects(platformRect))
-                {
-                    // collision par le bas
-                    if (_vitesse.Y > 0 && playerRect.Bottom - _vitesse.Y <= platformRect.Top)
-                    {
-                        _position.Y = platformRect.Top - Height;
-                        _vitesse.Y = 0;
-                        _grounded = true;
-                    }
-                    // collision par le haut
-                    else if (_vitesse.Y < 0 && playerRect.Top - _vitesse.Y >= platformRect.Bottom)
-                    {
-                        _position.Y = platformRect.Bottom;
-                        _vitesse.Y = 0;
-                    }
-                    // collision par la gauche
-                    else if (_vitesse.X > 0 && playerRect.Right - _vitesse.X <= platformRect.Left)
-                    {
-                        _position.X = platformRect.Left - Width;
-                        _vitesse.X = 0;
-                    }
-                    // collision par la droite
-                    else if (_vitesse.X < 0 && playerRect.Left - _vitesse.X >= platformRect.Right)
-                    {
-                        _position.X = platformRect.Right;
-                        _vitesse.X = 0;
-                    }
-                }
+                return;
             }
-
-            //foreach (Sprite plateform in Globals.Plateforms)
-            //{
-
-            //}
-
-            if (_position.Y >= 500)
-            {
-                _position = new Vector2(100, 100);
-            }
+            _acceleration += force / _masse;
         }
+
+        protected bool HandleCollisions()
+        {
+            // implémenter la logique de collision avec les éléments du jeu
+        }
+
 
     }
 }
