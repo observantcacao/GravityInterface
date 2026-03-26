@@ -1,4 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿/*
+ * auteur : Loukian platonov
+ * date   : 26.03.2026
+ * description : classe joueur
+ * aide   : https://www.youtube.com/watch?v=HujUFaqh-D8
+ */
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
@@ -36,6 +42,7 @@ namespace interfaceGravity.Models
         {
             UpdateVelocity(gameTime);
             UpdatePosition(gameTime);
+            Friction();
         }
 
         private void UpdateVelocity(GameTime gameTime)
@@ -84,7 +91,7 @@ namespace interfaceGravity.Models
                         if (futurPos.X > Position.X)
                         {
                             futurPos.X = platform.GetRectangle.Left - Width;
-                            
+
                         }
                         else
                         {
@@ -111,9 +118,28 @@ namespace interfaceGravity.Models
                         _velocity.Y = 0;
                     }
                 }
+
             }
 
             _position = futurPos;
+
+            if (_position.Y > 500)
+            {
+                _position = new Vector2(50, 50);
+                _velocity = Vector2.Zero;
+            }
+        }
+
+        private void Friction()
+        {
+            if (_grounded)
+            {
+                _velocity.X *= 0.7f; // 0.8f
+                if (Math.Abs(_velocity.X) < 0.1f)
+                {
+                    _velocity.X = 0;
+                }
+            }
         }
     }
 }

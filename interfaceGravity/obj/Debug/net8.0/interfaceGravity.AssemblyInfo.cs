@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("interfaceGravity")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74a47729eecb70b3a52e1478b0d0329c414b8176")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74358c6154d17068d3c4468e17d678a7bfe59038")]
 [assembly: System.Reflection.AssemblyProductAttribute("interfaceGravity")]
 [assembly: System.Reflection.AssemblyTitleAttribute("interfaceGravity")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

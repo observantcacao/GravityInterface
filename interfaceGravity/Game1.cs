@@ -1,4 +1,5 @@
-﻿using interfaceGravity.Models;
+﻿
+using interfaceGravity.Models;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -11,6 +12,7 @@ namespace interfaceGravity
         private SpriteBatch _spriteBatch;
         //private Player _player;
         private PlayerSimple _player;
+        private PlayerSimple _player2;
         private Sprite _platform1;
         private Sprite _platform2;
 
@@ -25,8 +27,8 @@ namespace interfaceGravity
         {
             //_player = new Player(1f, new Vector2(100, 100), new Vector2(50, 50));
             _player = new PlayerSimple(new Vector2(100, 100), new Vector2(50, 50));
-            _platform1 = new Sprite(new Vector2(0, 300), new Vector2(400, 600));
-            _platform2 = new Sprite(new Vector2(0, 350), new Vector2(1000, 600));
+            _platform1 = new Sprite(new Vector2(0, 300), new Vector2(400, 500));
+            //_platform2 = new Sprite(new Vector2(0, 350), new Vector2(1000, 600));
             base.Initialize();
         }
 
@@ -36,10 +38,10 @@ namespace interfaceGravity
             //_player.LoadContent(GraphicsDevice, Color.White);
             _player.LoadContent(GraphicsDevice, Color.Red);
             _platform1.LoadContent(GraphicsDevice, Color.MintCream);
-            _platform2.LoadContent(GraphicsDevice, Color.MintCream);
+            //_platform2.LoadContent(GraphicsDevice, Color.MintCream);
             // TODO: use this.Content to load your game content here
             Globals.Plateforms.Add(_platform1);
-            Globals.Plateforms.Add(_platform2);
+            //Globals.Plateforms.Add(_platform2);
         }
 
         protected override void Update(GameTime gameTime)
