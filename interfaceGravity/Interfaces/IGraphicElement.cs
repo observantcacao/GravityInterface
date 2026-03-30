@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace interfaceGravity.Interfaces
 {
+    /// <summary>
+    /// élément graphique qui seront affiché à l'écran.
+    /// </summary>
     interface IGraphicElement
     {
         Texture2D Texture { get; }

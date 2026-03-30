@@ -50,7 +50,7 @@ namespace interfaceGravity.Models
             // code...
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(_texture, GetRectangle, null, Color.White);
         }

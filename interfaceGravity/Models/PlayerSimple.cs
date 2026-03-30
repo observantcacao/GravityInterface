@@ -16,6 +16,8 @@ namespace interfaceGravity.Models
 {
     public class PlayerSimple : Sprite
     {
+        private Vector2 MAX_VELOCITY_BY_PLAYER = new Vector2(400f, 1200f);
+
         private float _speed = 20f;
         private float _jumpForce = 400f;
         private float _gravity = 800f;
@@ -51,11 +53,11 @@ namespace interfaceGravity.Models
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // déplacement
-            if (kState.IsKeyDown(_leftKey))
+            if (kState.IsKeyDown(_leftKey) && _velocity.X > -MAX_VELOCITY_BY_PLAYER.X)
             {
                 _velocity.X -= _speed;
             }
-            if (kState.IsKeyDown(_rightKey))
+            if (kState.IsKeyDown(_rightKey) && _velocity.X < MAX_VELOCITY_BY_PLAYER.X)
             {
                 _velocity.X += _speed;
             }
