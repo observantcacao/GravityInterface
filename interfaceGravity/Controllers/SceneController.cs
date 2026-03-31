@@ -21,10 +21,10 @@ namespace interfaceGravity.Controllers
             Error
         }
 
-        public SceneController(List<IScene> ListScene)
+        /*public SceneController(List<IScene> ListScene)
         {
 
-        }
+        }*/
 
         public void Update(GameTime gameTime)
         {
@@ -34,7 +34,7 @@ namespace interfaceGravity.Controllers
             } 
             catch (Exception ex)
             {
-                Console.WriteLine();
+                Console.WriteLine(ex);
                 SceneActuelle = SceneDisponible.Error;
             }
         }

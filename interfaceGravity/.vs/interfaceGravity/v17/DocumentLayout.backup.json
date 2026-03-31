@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\interfaces\\igraphicelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|solutionrelative:interfaces\\igraphicelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\models\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|solutionrelative:models\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\models\\playersimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|solutionrelative:models\\playersimple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\models\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|solutionrelative:models\\sprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\models\\modele.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|solutionrelative:models\\modele.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\interfaces\\igravity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|solutionrelative:interfaces\\igravity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\models\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|solutionrelative:models\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{70B6ABAA-E780-418D-B53F-28A433239F2F}|interfaceGravity.csproj|c:\\users\\admin\\documents\\4emeannee\\garchery\\gravity\\interfacegravity\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,12 +13,12 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 459,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 277,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,106 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerSimple.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\PlayerSimple.cs",
-              "RelativeDocumentMoniker": "Models\\PlayerSimple.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\PlayerSimple.cs",
-              "RelativeToolTip": "Models\\PlayerSimple.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T14:07:34.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "modele.cd",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\modele.cd",
-              "RelativeDocumentMoniker": "Models\\modele.cd",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\modele.cd",
-              "RelativeToolTip": "Models\\modele.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2026-03-26T13:51:58.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Button.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Button.cs",
-              "RelativeDocumentMoniker": "Models\\Button.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Button.cs",
-              "RelativeToolTip": "Models\\Button.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T13:44:20.304Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Sprite.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Sprite.cs",
               "RelativeDocumentMoniker": "Models\\Sprite.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Sprite.cs",
               "RelativeToolTip": "Models\\Sprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwDAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T09:42:45.794Z",
+              "WhenOpened": "2026-03-30T13:07:40.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IGraphicElement.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Interfaces\\IGraphicElement.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IGraphicElement.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Interfaces\\IGraphicElement.cs",
-              "RelativeToolTip": "Interfaces\\IGraphicElement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:15:17.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T07:47:44.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Globals.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Globals.cs",
-              "RelativeDocumentMoniker": "Models\\Globals.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Models\\Globals.cs",
-              "RelativeToolTip": "Models\\Globals.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T08:37:13.305Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IGravity.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Interfaces\\IGravity.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IGravity.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\4emeAnnee\\Garchery\\gravity\\interfaceGravity\\Interfaces\\IGravity.cs",
-              "RelativeToolTip": "Interfaces\\IGravity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-24T09:15:28.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T07:47:44.943Z"
             }
           ]
         }

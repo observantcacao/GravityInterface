@@ -36,11 +36,10 @@ namespace interfaceGravity.Models
         /// <summary>
         /// charage une couleur unie dans la texture du sprite
         /// </summary>
-        /// <param name="graphicsDevice"></param>
         /// <param name="color">couleur voulue dans le sprite</param>
-        public void LoadContent(GraphicsDevice graphicsDevice, Color color)
+        public void LoadContent(Color color)
         {
-            Texture2D texture = new Texture2D(graphicsDevice, 1, 1);
+            Texture2D texture = new Texture2D(Globals.GraphicsDevice ,1 ,1);
             texture.SetData(new[] { color });
             _texture = texture;
         }

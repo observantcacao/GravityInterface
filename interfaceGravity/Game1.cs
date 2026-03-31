@@ -1,4 +1,5 @@
 ﻿
+using interfaceGravity.Controllers;
 using interfaceGravity.Models;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,6 +11,7 @@ namespace interfaceGravity
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private GameController _gameController;
 
         public Game1()
         {
@@ -20,18 +22,24 @@ namespace interfaceGravity
 
         protected override void Initialize()
         {
+            _gameController = new GameController();
+            _gameController.Initialize();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            Globals.GraphicsDevice = GraphicsDevice;
+            _gameController.LoadContent();
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+            _gameController.Update(gameTime);
 
             // TODO: Add your update logic here
             base.Update(gameTime);
@@ -43,6 +51,7 @@ namespace interfaceGravity
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
+            _gameController.Draw(_spriteBatch);
             _spriteBatch.End();
 
             base.Draw(gameTime);

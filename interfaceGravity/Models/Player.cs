@@ -52,14 +52,12 @@ namespace interfaceGravity.Models
             // déplacement horizontal
             if (kstate.IsKeyDown(_leftKey))
             {
-                direction.X = -1;
+                direction.X -=_speed;
             }
             if (kstate.IsKeyDown(_rightKey))
             {
-                direction.X = 1;
+                direction.X += _speed;
             }
-
-
 
             // saut
             if (kstate.IsKeyDown(_jumpKey) && _grounded)
@@ -126,10 +124,13 @@ namespace interfaceGravity.Models
             _acceleration += force / _masse;
         }
 
-        /*protected bool HandleCollisions()
+        protected bool HandleCollisions()
         {
-            // implémenter la logique de collision avec les éléments du jeu
-        }*/
+            if ()
+            {
+                
+            }
+        }
 
 
     }
